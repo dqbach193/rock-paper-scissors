@@ -13,13 +13,62 @@
             let num = Math.floor(Math.random() * 100);
             //If 0-32 return Rock, 33-65 return Paper, 67-99 return Scissors
             if(num < 33){
-                return "Rock";
+                return "rock";
             }else if(num < 67){
-                return "Paper";
+                return "paper";
             }else{
-                return "Scissors";
+                return "scissors";
             }
         }
+
+        //prompt user input
+        let playerSelection = prompt("Please make a choice:");
+
+        //take user's input and make it lowercase
+        playerSelection = playerSelection.toLowerCase();
+        //make a variable and take computer choice
+        let computerSelection = getComputerChoice();
+
+        function playRound(playerSelection, computerSelection){
+            //compare the user choice to computer choice
+            //When it is draw
+            if(playerSelection === computerSelection){
+                console.log("Draw!");
+                return;
+            }
+            //When the player chooses rock
+            if(playerSelection == "rock"){
+                if(computerSelection == "paper"){
+                    console.log('You lose! Paper beats Rock')
+                    return;
+                }else{
+                    console.log('You win! Scissors lose to Rock')
+                    return;
+                }
+            }
+            //When the player chooses paper
+            if(playerSelection === "paper"){
+                if(computerSelection === "scissors"){
+                    console.log('You lose! Scissors beats Paper')
+                    return;
+                }else{
+                    console.log('You win! Rock lose to Paper')
+                    return;
+                }
+            }
+            //When the player chooses scissors
+            if(playerSelection === "scissors"){
+                if(computerSelection === "rock"){
+                    console.log('You lose! Rock beats Scissors')
+                    return;
+                }else{
+                    console.log('You win! Paper lose to Scissors')
+                    return;
+                }
+            }
+        }
+        
+        playRound(playerSelection, computerSelection);
     </script>
 </body>
 </html>
