@@ -54,19 +54,43 @@
         }
         
         function game(){
-            //prompt user input
-            let playerSelection = prompt("Please make a choice:");
+            let userScore = 0;
+            let compScore = 0;
 
-            //take user's input and make it lowercase
-            playerSelection = playerSelection.toLowerCase();
-            //make a variable and take computer choice
-            let computerSelection = getComputerChoice();
+            for(let i = 0; i < 5; i++){
 
-            //Print out result
-            console.log(playRound(playerSelection, computerSelection));
+                //prompt user input
+                let playerSelection = prompt("Please make a choice:");
+                //take user's input and make it lowercase
+                playerSelection = playerSelection.toLowerCase();
+                //make a variable and take computer choice
+                let computerSelection = getComputerChoice();
+                //Print out result
+                let result = playRound(playerSelection, computerSelection);
+                console.log(result);
+                if(result === "Draw!"){
+                    continue;
+                }else if (result.charAt(4) === "L"){
+                    compScore = compScore + 1;
+                    continue;
+                }else{
+                    userScore = userScore + 1;
+                    continue;
+                }
+                
+            }
+            if(userScore < compScore){
+                console.log('You Lost! Better luck next time');
+                console.log(`User Score: ${userScore}, Computer Score: ${compScore}`);
+                return;
+            }else{
+                console.log('You Won! Congratulations :D');
+                console.log(`User Score: ${userScore}, Computer Score: ${compScore}`);
+                return;
+            }
         }
 
-        
+
     </script>
 </body>
 </html>
