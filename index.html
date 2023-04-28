@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+    <script>
+        function getComputerChoice(){
+            //Choose a random number between 0 and 99
+            let num = Math.floor(Math.random() * 100);
+            //If 0-32 return Rock, 33-65 return Paper, 67-99 return Scissors
+            if(num < 33){
+                return "Rock";
+            }else if(num < 67){
+                return "Paper";
+            }else{
+                return "Scissors";
+            }
+        }
+    </script>
+</body>
+</html>
