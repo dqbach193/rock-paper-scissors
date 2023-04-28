@@ -18,8 +18,8 @@ function playRound(playerSelection, computerSelection){
         return "Draw!";
     }
     //When the player chooses rock
-    if(playerSelection == "rock"){
-        if(computerSelection == "paper"){
+    if(playerSelection === "rock"){
+        if(computerSelection === "paper"){
             return 'You lose! Paper beats Rock';
         }else{
             return 'You win! Scissors lose to Rock';
@@ -48,7 +48,6 @@ function game(){
     let compScore = 0;
 
     for(let i = 0; i < 5; i++){
-
         //prompt user input
         let playerSelection = prompt("Please make a choice:");
         //take user's input and make it lowercase
@@ -67,7 +66,6 @@ function game(){
             userScore = userScore + 1;
             continue;
         }
-        
     }
     if(userScore < compScore){
         console.log('You Lost! Better luck next time');
