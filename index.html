@@ -21,14 +21,6 @@
             }
         }
 
-        //prompt user input
-        let playerSelection = prompt("Please make a choice:");
-
-        //take user's input and make it lowercase
-        playerSelection = playerSelection.toLowerCase();
-        //make a variable and take computer choice
-        let computerSelection = getComputerChoice();
-
         function playRound(playerSelection, computerSelection){
             //compare the user choice to computer choice
             //When it is draw
@@ -61,7 +53,20 @@
             }
         }
         
-        console.log(playRound(playerSelection, computerSelection));
+        function game(){
+            //prompt user input
+            let playerSelection = prompt("Please make a choice:");
+
+            //take user's input and make it lowercase
+            playerSelection = playerSelection.toLowerCase();
+            //make a variable and take computer choice
+            let computerSelection = getComputerChoice();
+
+            //Print out result
+            console.log(playRound(playerSelection, computerSelection));
+        }
+
+        
     </script>
 </body>
 </html>
