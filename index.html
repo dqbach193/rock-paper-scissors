@@ -33,42 +33,35 @@
             //compare the user choice to computer choice
             //When it is draw
             if(playerSelection === computerSelection){
-                console.log("Draw!");
-                return;
+                return "Draw!";
             }
             //When the player chooses rock
             if(playerSelection == "rock"){
                 if(computerSelection == "paper"){
-                    console.log('You lose! Paper beats Rock')
-                    return;
+                    return 'You lose! Paper beats Rock';
                 }else{
-                    console.log('You win! Scissors lose to Rock')
-                    return;
+                    return 'You win! Scissors lose to Rock';
                 }
             }
             //When the player chooses paper
             if(playerSelection === "paper"){
                 if(computerSelection === "scissors"){
-                    console.log('You lose! Scissors beats Paper')
-                    return;
+                    return 'You lose! Scissors beats Paper';
                 }else{
-                    console.log('You win! Rock lose to Paper')
-                    return;
+                    return 'You win! Rock lose to Paper';
                 }
             }
             //When the player chooses scissors
             if(playerSelection === "scissors"){
                 if(computerSelection === "rock"){
-                    console.log('You lose! Rock beats Scissors')
-                    return;
+                    return 'You lose! Rock beats Scissors';
                 }else{
-                    console.log('You win! Paper lose to Scissors')
-                    return;
+                    return 'You win! Paper lose to Scissors';
                 }
             }
         }
         
-        playRound(playerSelection, computerSelection);
+        console.log(playRound(playerSelection, computerSelection));
     </script>
 </body>
 </html>
