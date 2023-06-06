@@ -59,7 +59,7 @@ function game(){
         console.log(result);
         if(result === "Draw!"){
             continue;
-        }else if (result.charAt(4) === "L"){
+        }else if (result.charAt(4) === "l"){
             compScore = compScore + 1;
             continue;
         }else{
