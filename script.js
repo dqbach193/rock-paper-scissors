@@ -52,6 +52,8 @@ function playRound(playerSelection, computerSelection){
 let userScore = 0;
 let compScore = 0;
 
+//Event when pressing buttons
+
 rock.addEventListener('click', () => {
     let computerSelection = getComputerChoice();
     let result = playRound('rock',computerSelection);
@@ -72,6 +74,8 @@ scissors.addEventListener('click', () => {
     calScore(result);
     resultDiv.innerHTML = result + `<br>` + ` Current Score: User Score: ${userScore}, Computer Score: ${compScore}`;
 })
+
+//Score calculators
 
 function calScore(result){
     if (result.charAt(4) === "l"){
